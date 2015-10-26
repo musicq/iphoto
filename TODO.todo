@@ -1,0 +1,5 @@
+TODO:
+  ☐ 鼠标移出 **#iphoto** 后，图片弹出层 **.iphoto-pop-holder** 不会消失
+
+性能优化:
+  ☐ 多组 **.iphoto-list** 出现，会使得这个程序比较卡
