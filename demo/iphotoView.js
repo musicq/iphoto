@@ -79,6 +79,6 @@ $(function() {
       $tar.parent('.list-item').addClass('mark');
     }
     
-  }, 3000);
+  }, 800);
 
 });

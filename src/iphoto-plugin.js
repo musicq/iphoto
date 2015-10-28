@@ -1,3 +1,9 @@
+/*!
+ * iPhoto 1.0.0
+ * 
+ * @license MIT licensed
+ * Copyright (C) 2015 musicq.github.io
+ */
 ;(function($) {
   "use strict";
   /**
