@@ -268,7 +268,6 @@
             height: z_h
           });
         $ipop.find(POP_IMG_SEL).attr('src', src);
-        console.log('load')
       } else {
         $('<div class="iphoto-pop-holder"><div class="iphoto-pop" data-index= "'+$target.data('index')+'" style="top: '+z_y+'px; left: '+z_x+'px; width: '+z_w+'px; height: '+z_h+'px;"><img class="pop-img" src="'+src+'" alt="" /></div></div>')
           .appendTo($('body'))
