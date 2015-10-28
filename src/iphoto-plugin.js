@@ -158,7 +158,7 @@
     }
 
     /**
-     * [放大图片弹出层]
+     * [弹出 pop 层]
      * @param  {[object]} $target [目标元素的 jquery 对象]
      * @param  {[string]} src     [图片源]
      * @param  {[number]} z_w     [图片缩放后的宽度]
