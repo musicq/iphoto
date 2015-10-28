@@ -2,7 +2,7 @@
 
 iPhoto 是一个模仿 Mac 应用 iPhoto 写的一个 jquery 插件
 
-![preview](https://github.com/musicq/iphoto/tree/master/demo/img/preview.png)
+![preview](https://github.com/musicq/iphoto/blob/master/demo/img/preview.png)
 
 你可以按照自己喜欢的方式，把它应用在网站的任何位置，它是一种新的图片展示方式，相信会给用户一种眼前一亮的浏览体验。
 
