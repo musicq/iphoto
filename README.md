@@ -23,4 +23,9 @@ $('#iphoto').iPhoto();
 
 ---
 
-<!-- 你可以根据需要使用这个完成一个小的 web 应用， 例如 [这里]() -->
+
+ 你可以根据需要使用这个完成一个小的 web 应用， 例如 [这里](http://localhost:4000/demos/iphoto/index.html)，示例代码可以克隆下这个 repo，然后运行
+ ```shell
+ npm install
+ node server.js
+ ```
