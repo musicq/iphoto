@@ -5,39 +5,26 @@
   <meta name="viewport" content="width = device-width, initial-scale = 1"/>
   <title>iPhoto</title>
   <link rel="stylesheet" type="text/css" href="iphoto.css" />
-  <link rel="stylesheet" type="text/css" href="public/main.css">  
-  <style type="text/css">
-    .img-hold{
-      background-image: url(http://cdn.duitang.com/uploads/item/201510/21/20151021051529_M2FEP.jpeg);
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="main.css">  
 </head>
 <body>
+
   <div class="main">
     <div id="iphoto">
       <div class="iphoto-list">
         <div class="list">
           <ul class="list-package">
-            <li class="list-item square-s">
+            <!-- <li class="list-item square-s">
               <div class="img-hold"></div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- <div class="iphoto-view">
-    <div class="iphoto-overlay"></div>
-    <div class="iphoto-bubble">
-      <img src="http://img4.duitang.com/uploads/item/201412/06/20141206090809_w8wdr.jpeg" />
-    </div>
-  </div> -->
-
-
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="iphoto.js"></script>
-<script type="text/javascript" src="iphotoView.js"></script>
+<script type="text/javascript" src="iphoto-plugin.js"></script>
 <script>
   var $pkg = $('#iphoto').find('.list-package'); // 父元素
 
@@ -47,7 +34,7 @@
     url: url,
     dataType: 'json',
     success: function(res) {
-      console.log(res);
+      // console.log(res);
       var M = res.data.blogs;
       for(var i = 0; i< M.length; i++) {
         $('<li class="list-item square-s"><div class="img-hold" data-index="'+i+'" style="background-image: url('+M[i].isrc+')"></div></li>').appendTo($pkg);
@@ -55,5 +42,7 @@
     }
   })
 </script>
+
+<script type="text/javascript" src="iphotoView.js"></script>
 </body>
 </html>

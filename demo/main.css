@@ -16,6 +16,42 @@ body {
   -webkit-user-select: none;
 }
 
+/* 标记 */
+.mark {
+  outline-color: rgba(255, 0, 0, 0.64);
+  outline-style: ridge;
+  outline-width: 8px;
+  z-index: 9;
+}
+
+.iphoto-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.iphoto-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.iphoto-bubble {
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+.iphoto-bubble img {
+  display: block;
+  width: 100%;
+}
+
+
 
 /* loading  
  * source: http://tobiasahlin.com/spinkit/ 

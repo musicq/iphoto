@@ -23,11 +23,6 @@
       WIN_H,
       VIEW = 'YEAR';
 
-
-  /**
-   * iphoto 程序入口函数
-   * @param {String} iphoto_id 需要使用 iphoto 的元素 id
-   */
   /**
    * iphoto 程序入口函数
    * @param {String} iphoto_id 需要使用 iphoto 的元素 id

@@ -1,9 +1,13 @@
 $(function() {
-  iphoto('#iphoto', photoView);
-
+  
+  $('#iphoto').iPhoto({
+    MOUSEMOVE: false,
+    afterSelected: photoView,
+  });
+  
   // 显示详细视图
   function photoView($target, index) {
-    console.log($target.data('index'));
+    $('.list-item').removeClass('mark');
 
     var gap = 20;
     var $tar = $target,
@@ -27,9 +31,9 @@ $(function() {
     img.onload = function() {
       var img_w = img.width,
           img_h = img.height,
-          max_w = img_w > WIN_W ? WIN_W - gap*2 : img_w,
+          max_w = 600,
           max_h = img_h > WIN_H ? WIN_H - gap*2 :img_h,
-          imgSize = imgScale(img_w, img_h, max_w, max_h),
+          imgSize = $.fn.iPhoto.imgScale(img_w, img_h, max_w, max_h),
           w = imgSize.width,
           h = imgSize.height,
           l = (WIN_W - w)/2,
@@ -47,39 +51,34 @@ $(function() {
       $('.iphoto-view').find('.iphoto-bubble').animate({
         width: w,
         top: t,
-        left: l
+        left: l,
       }, 500);
+    }
+    img.onerror = function() {
+      $target.siblings('.sk-cube-grid').remove();
+      console.log('error');
+      return false;
     }
 
     $(document).on('click', '.iphoto-view', function(){
       $('.iphoto-view').remove();
     });
    
-
   }
 
 
-  function imgScale(width, height, CUS_MAX_WIDTH, CUS_MAX_HEIGHT) {
-    var pos = {},
-        scale = width/height,
-        //the_MAX_WIDTH = typeof(CUS_MAX_WIDTH) == 'undefined' ? MAX_WIDTH : CUS_MAX_WIDTH,
-        //the_MAX_HEIGHT = typeof(CUS_MAX_HEIGHT) == 'undefined' ? MAX_HEIGHT : CUS_MAX_HEIGHT;
-      the_MAX_WIDTH = CUS_MAX_WIDTH || MAX_WIDTH,
-      the_MAX_HEIGHT = CUS_MAX_HEIGHT || MAX_HEIGHT;
+  setTimeout(function(){
+    $tar = $('.img-hold[data-index=24]');
 
-    if(scale > 1) {
-      scale = the_MAX_WIDTH/width;
-      width = the_MAX_WIDTH; // width = width * scale  -> the_MAX_WIDTH
-      height = height * scale;
-    } else {
-      scale = the_MAX_HEIGHT/height;
-      width = width * scale;
-      height = the_MAX_HEIGHT;
+    src = $tar.css('background-image').replace(/^url|[\(\)]/g, '');
+    var img = new Image();
+    img.src = src;
+
+    img.onload = function() {
+      $.fn.iPhoto.iphotoPopUp($tar, src, img.width, img.height);
+      $tar.parent('.list-item').addClass('mark');
     }
-    pos.width = width;
-    pos.height = height;
-
-    return pos;
-  }
+    
+  }, 3000);
 
 });
