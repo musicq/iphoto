@@ -71,7 +71,7 @@ $.fn.iPhoto.iphotoPopUp($target, src, z_w, z_h, e);
 
 ---
 
-你可以根据需要使用 iPhoto 插件完成一个小的 web 应用， 例如 [这里]()。
+你可以根据需要使用 iPhoto 插件完成一个小的 web 应用， 例如 [这里](http://musicq.github.io/demos/iphoto/index.html)。
 
 你也可以克隆下这个 repo，在本地运行
 
