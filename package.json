@@ -22,5 +22,13 @@
     "iphoto"
   ],
   "author": "musicq",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musicq/iphoto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/musicq/iphoto/issues"
+  },
+  "homepage": "https://github.com/musicq/iphoto#readme"
 }
