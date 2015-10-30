@@ -1,6 +1,7 @@
 /*!
- * iPhoto 1.0.0
- * 
+ * iPhoto 0.1.0
+ *
+ * Github https://github.com/musicq/iphoto
  * @license MIT licensed
  * Copyright (C) 2015 musicq.github.io
  */
