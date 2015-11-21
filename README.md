@@ -8,6 +8,26 @@ iPhoto 是一个模仿 Mac 应用 iPhoto 写的一个 jquery 插件
 
 ## 使用方法
 
+HTML 结构
+```html
+<div id="iphoto">
+  <div class="iphoto-list">
+    <div class="list">
+      <ul class="list-package">
+        <li class="list-item square-s">
+          <div class="img-hold" data-index="0" style="background-image: url(http://cdn.duitang.com/uploads/item/201510/22/20151022123038_HanNY.thumb.224_0.jpeg)"></div>
+        </li>
+        <li class="list-item square-s">
+          <div class="img-hold" data-index="0" style="background-image: url(http://cdn.duitang.com/uploads/item/201510/22/20151022123038_HanNY.thumb.224_0.jpeg)"></div>
+        </li>
+        ......
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+调用方法
 ```javascript
 $('#iphoto').iPhoto();
 ```
