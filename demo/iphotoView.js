@@ -1,5 +1,5 @@
 $(function() {
-  
+
   $('#iphoto').iPhoto({
     MOUSEMOVE: false,
     afterSelected: photoView,
@@ -12,7 +12,7 @@ $(function() {
     var gap = 20;
     var $tar = $target,
         $D_H = $(document).height(),
-        src = $tar.css('background-image').replace(/^url|[\(\)]/g, ''), // 得到背景图片，并处理掉 url()
+        src = $tar.css('background-image').replace(/^url|["?\(\)"?]/g, ''), // 得到背景图片，并处理掉 url()
         WIN_H = $(window).height(),
         WIN_W = $(window).width(),
         scroll_h = $(document).scrollTop(),
@@ -70,7 +70,7 @@ $(function() {
   setTimeout(function(){
     $tar = $('.img-hold[data-index=24]');
 
-    src = $tar.css('background-image').replace(/^url|[\(\)]/g, '');
+    src = $tar.css('background-image').replace(/^url|["?\(\)"?]/g, '');
     var img = new Image();
     img.src = src;
 

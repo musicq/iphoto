@@ -367,7 +367,7 @@
         return false;
       }
 
-      src = $target.css('background-image').replace(/^url|[\(\)]/g, ''); // 得到背景图片，并处理掉 url()
+      src = $target.css('background-image').replace(/^url|["?\(\)"?]/g, ''); // 得到背景图片，并处理掉 url()
 
       var img = new Image();
       img.src = src;
